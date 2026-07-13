@@ -25,7 +25,7 @@ except KeyError:
     st.error("Gemini API key not found. Please configure GEMINI_API_KEY in Streamlit Secrets.")
     st.stop()
 
-gemini_model = genai.GenerativeModel("gemini-2.5-flash")
+gemini_model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 # SESSION STATE
 
