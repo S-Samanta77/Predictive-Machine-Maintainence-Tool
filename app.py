@@ -178,6 +178,27 @@ predict_button = st.button(
 
 if predict_button:
 
+    # INPUT VALIDATION
+
+    if not (295 <= air_temp <= 305):
+        st.error("❌ Air Temperature must be between 295 K and 305 K.")
+        st.stop()
+
+    if not (305 <= process_temp <= 315):
+        st.error("❌ Process Temperature must be between 305 K and 315 K.")
+        st.stop()
+
+    if not (1100 <= rpm <= 3000):
+        st.error("❌ Rotational Speed must be between 1100 RPM and 3000 RPM.")
+        st.stop()
+
+    if not (0 <= torque <= 80):
+        st.error("❌ Torque must be between 0 Nm and 80 Nm.")
+        st.stop()
+
+    if not (0 <= tool_wear <= 300):
+        st.error("❌ Tool Wear must be between 0 and 300 minutes.")
+        st.stop()
     # Encode Product Type
 
     encoded_type = encoder.transform([product_type])[0]
