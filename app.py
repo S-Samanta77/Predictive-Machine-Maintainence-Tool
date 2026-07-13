@@ -82,6 +82,7 @@ left, right = st.columns(2)
 
 with left:
 
+    st.caption("Choose a type")
     product_type = st.selectbox(
 
         "Product Type",
